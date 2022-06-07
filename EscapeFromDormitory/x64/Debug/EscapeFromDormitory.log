@@ -1,0 +1,5 @@
+﻿  main.c
+C:\dev\prj\EscapeFromDormitory\EscapeFromDormitory\main.c(1,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\dev\prj\EscapeFromDormitory\EscapeFromDormitory\game.h(19,20): warning C4244: '함수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\dev\prj\EscapeFromDormitory\EscapeFromDormitory\game.h(19,31): warning C4244: '함수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  EscapeFromDormitory.vcxproj -> C:\dev\prj\EscapeFromDormitory\x64\Debug\EscapeFromDormitory.exe
