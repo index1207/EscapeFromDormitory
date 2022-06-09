@@ -2,33 +2,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
+#include "screen.h"
 
 // 색상표
-typedef enum _colors {
-	BLACK,
-	BLUE,
-	GREEN,
-	AQUA,
-	RED,
-	PURPLE,
-	YELLOW,
-	WHITE,
-	GRAY,
-	LightBLUE,
-	LightGREEN,
-	LightAQUA,
-	LightRED,
-	LightPURPLE,
-	LightYELLOW,
-	LightWHITE
-} Color;
+typedef struct _colors {
+	char* Red;
+	char* Green;
+	char* Yellow;
+	char* Blue;
+	char* Purple;
+	char* Cyan;
+	char* White;
+} Colors;
 
+Colors color;
+
+typedef struct _point {
+	double x;
+	double y;
+} Point;
 
 // 색깔 바꿔서 출력하기
-void print(const char* str, Color color) {
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
-	printf(str);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), WHITE);
+void print(Point p, const char* str, const char* color) {
+	size_t dw;
+	COORD pos = { p.x, p.y };
+
+	SetConsoleCursorPosition(hScreen[screenIdx], pos);
+	WriteFile(hScreen[screenIdx], str, strlen(str), &dw, NULL);
 }
 
 
