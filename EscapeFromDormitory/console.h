@@ -23,7 +23,7 @@ typedef struct _point {
 } Point;
 
 // 색깔 바꿔서 출력하기
-void print(Point p, const char* str, const char* color) {
+void print(Point p, const char* str) {
 	size_t dw;
 	COORD pos = { p.x, p.y };
 

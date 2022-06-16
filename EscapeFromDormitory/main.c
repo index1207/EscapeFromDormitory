@@ -4,7 +4,7 @@ int main() {
 	initialization();
 
 	while (TRUE) {
-		Sleep(33);
+		Sleep(14);
 		update();
 		render();
 	}
