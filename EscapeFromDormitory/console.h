@@ -5,32 +5,37 @@
 #include "screen.h"
 
 // 색상표
-typedef struct _colors {
-	char* Red;
-	char* Green;
-	char* Yellow;
-	char* Blue;
-	char* Purple;
-	char* Cyan;
-	char* White;
-} Colors;
+#define WHITE "\x1b[37m"
+#define RED(str) "\x1b[31m"str##WHITE
+#define GREEN(str) "\x1b[32m"str##WHITE
+#define YELLOW(str) "\x1b[33m"str##WHITE
+#define BLUE(str) "\x1b[34m"str##WHITE
+#define PURPLE(str) "\x1b[35m"str##WHITE
+#define CYAN(str) "\x1b[36m"str##WHITE
 
-Colors color;
 
 typedef struct _point {
 	double x;
 	double y;
-} Point;
+} Point, Map;
 
 // 색깔 바꿔서 출력하기
 void print(Point p, const char* str) {
-	size_t dw;
+	size_t dw = 0;
 	COORD pos = { p.x, p.y };
 
 	SetConsoleCursorPosition(hScreen[screenIdx], pos);
 	WriteFile(hScreen[screenIdx], str, strlen(str), &dw, NULL);
 }
 
+void setPoint(Point* p, int x, int y) {
+	p->x = x;
+	p->y = y;
+}
+
+int equalPoint(Point a, Point b) {
+	return ((floor(a.x + 0.5) == floor(b.x + 0.5)) && (floor(a.y + 0.5) == floor(b.y + 0.5)));
+}
 
 // CMD 크기조절
 void setConsoleSize(short width, short height) {
@@ -53,9 +58,4 @@ void showCursor(boolean show) {
 	cursorInfo.dwSize = 1;
 	cursorInfo.bVisible = show;
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
-}
-
-// 키 입력
-int inputKey(int key) {
-	return (GetAsyncKeyState(key) & 0x8000);
 }

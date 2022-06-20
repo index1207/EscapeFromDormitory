@@ -21,16 +21,19 @@
   <ItemGroup>
     <ClInclude Include="console.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="map.h" />
     <ClInclude Include="screen.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="five.txt" />
-    <Text Include="four.txt" />
-    <Text Include="room.txt" />
-    <Text Include="three.txt" />
+    <Text Include="second.txt" />
+    <Text Include="stage\fifth.txt" />
+    <Text Include="stage\fourth.txt" />
+    <Text Include="stage\room.txt" />
+    <Text Include="stage\third.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
