@@ -21,7 +21,6 @@
   <ItemGroup>
     <ClInclude Include="console.h" />
     <ClInclude Include="game.h" />
-    <ClInclude Include="map.h" />
     <ClInclude Include="screen.h" />
   </ItemGroup>
   <ItemGroup>
@@ -29,11 +28,9 @@
     <ClCompile Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="second.txt" />
-    <Text Include="stage\fifth.txt" />
-    <Text Include="stage\fourth.txt" />
-    <Text Include="stage\room.txt" />
-    <Text Include="stage\third.txt" />
+    <Text Include="fourth.txt" />
+    <Text Include="leftside.txt" />
+    <Text Include="rightside.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
