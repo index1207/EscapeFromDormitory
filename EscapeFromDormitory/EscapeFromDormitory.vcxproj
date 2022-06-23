@@ -28,9 +28,10 @@
     <ClCompile Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="fourth.txt" />
+    <Text Include="third.txt" />
     <Text Include="leftside.txt" />
     <Text Include="rightside.txt" />
+    <Text Include="title.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

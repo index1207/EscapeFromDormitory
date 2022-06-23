@@ -21,11 +21,11 @@ typedef struct _point {
 
 // 색깔 바꿔서 출력하기
 void print(Point p, const char* str) {
-	size_t dw = 0;
+	DWORD dw = 0;
 	COORD pos = { p.x, p.y };
 
 	SetConsoleCursorPosition(hScreen[screenIdx], pos);
-	WriteFile(hScreen[screenIdx], str, strlen(str), &dw, NULL);
+	WriteFile(hScreen[screenIdx], str, (DWORD)strlen(str), &dw, NULL);
 }
 
 void setPoint(Point* p, int x, int y) {

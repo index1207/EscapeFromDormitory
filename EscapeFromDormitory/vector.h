@@ -6,6 +6,11 @@ typedef struct _Vec {
 	double y;
 } vec2;
 
+static const vec2 vUp = { 0, 1 };
+static const vec2 vDown = { 0, -1 };
+static const vec2 vLeft = { -1, 0 };
+static const vec2 vRight = { 1,0 };
+
 double vec2_size(vec2 u) {
 	return sqrt(u.x * u.x + u.y * u.y);
 }
