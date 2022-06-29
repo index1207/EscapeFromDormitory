@@ -6,12 +6,12 @@
 
 // 색상표
 #define WHITE "\x1b[37m"
-#define RED(str) "\x1b[31m"str##WHITE
-#define GREEN(str) "\x1b[32m"str##WHITE
-#define YELLOW(str) "\x1b[33m"str##WHITE
-#define BLUE(str) "\x1b[34m"str##WHITE
-#define PURPLE(str) "\x1b[35m"str##WHITE
-#define CYAN(str) "\x1b[36m"str##WHITE
+#define RED "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define YELLOW "\x1b[33m"
+#define BLUE "\x1b[34m"
+#define PURPLE "\x1b[35m"
+#define CYAN "\x1b[36m"
 
 
 typedef struct _point {

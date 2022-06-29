@@ -13,41 +13,91 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="소스 파일\core">
-      <UniqueIdentifier>{7429fe3d-e55c-4dc1-aeb9-05d3fa5b6538}</UniqueIdentifier>
-    </Filter>
     <Filter Include="리소스 파일\stage">
       <UniqueIdentifier>{07eaec95-4d20-424f-ba9e-7b7e377e2ea4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\core">
+      <UniqueIdentifier>{7429fe3d-e55c-4dc1-aeb9-05d3fa5b6538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\sound">
+      <UniqueIdentifier>{d740b7e1-c45f-4a6b-bee8-000ba95eea23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
     <ClInclude Include="console.h">
-      <Filter>소스 파일\core</Filter>
+      <Filter>헤더 파일\core</Filter>
     </ClInclude>
     <ClInclude Include="screen.h">
-      <Filter>소스 파일\core</Filter>
+      <Filter>헤더 파일\core</Filter>
+    </ClInclude>
+    <ClInclude Include="rendering.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inputmanager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="kizaoui.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>헤더 파일\core</Filter>
+    </ClInclude>
+    <ClInclude Include="gameData.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="vector.h">
+      <Filter>헤더 파일\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="five.txt">
+    <Text Include="resource\stage\leftside.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
-    <Text Include="four.txt">
+    <Text Include="resource\stage\rightside.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
-    <Text Include="three.txt">
+    <Text Include="resource\stage\roby.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
-    <Text Include="room.txt">
+    <Text Include="resource\title.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="first.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resource\sound\6호_노가리.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\게임오버.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\대화1.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\대화2.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\잡혔을때.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\쫒아가면서.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\쫒아갈때.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\힌트1.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -21,17 +21,33 @@
   <ItemGroup>
     <ClInclude Include="console.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gameData.h" />
+    <ClInclude Include="inputmanager.h" />
+    <ClInclude Include="kizaoui.h" />
+    <ClInclude Include="rendering.h" />
     <ClInclude Include="screen.h" />
+    <ClInclude Include="sound.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="third.txt" />
-    <Text Include="leftside.txt" />
-    <Text Include="rightside.txt" />
-    <Text Include="title.txt" />
+    <Text Include="first.txt" />
+    <Text Include="resource\stage\leftside.txt" />
+    <Text Include="resource\stage\rightside.txt" />
+    <Text Include="resource\stage\roby.txt" />
+    <Text Include="resource\title.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resource\sound\6호_노가리.wav" />
+    <Media Include="resource\sound\게임오버.wav" />
+    <Media Include="resource\sound\대화1.wav" />
+    <Media Include="resource\sound\대화2.wav" />
+    <Media Include="resource\sound\잡혔을때.wav" />
+    <Media Include="resource\sound\쫒아가면서.wav" />
+    <Media Include="resource\sound\쫒아갈때.wav" />
+    <Media Include="resource\sound\힌트1.wav" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -95,6 +111,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -111,6 +128,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -123,6 +141,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,6 +158,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
