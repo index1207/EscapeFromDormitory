@@ -10,6 +10,15 @@
 
 // 초기화
 void initialization() {
+	CONSOLE_FONT_INFOEX fontex;
+	fontex.cbSize = sizeof(CONSOLE_FONT_INFOEX);
+	handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	GetCurrentConsoleFontEx(handle, 0, &fontex);
+	fontex.FontWeight = 800;
+	fontex.dwFontSize.X = 22;
+	fontex.dwFontSize.Y = 22;
+	SetCurrentConsoleFontEx(handle, NULL, &fontex);
+
 	isTitleScreen = TRUE;
 
 	// 사운드
@@ -17,8 +26,8 @@ void initialization() {
 
 	//스테미나와 좌표의 초기값
 	stamina = MAX_STAMINA;
-	setPoint(&player.pos, 1, 2);
-	setPoint(&enemy.pos, 50, 20);
+	setPoint(&player.pos, 50, 8);
+	setPoint(&enemy.pos, 75, 2);
 
 	// 기본적인 콘솔창 세팅
 	showCursor(FALSE);
@@ -64,27 +73,33 @@ void render() {
 	}
 	else {
 		// 맵 그리기
-		renderMap(5);
+		renderMap(stageIdx);
+
+		// 층
+		drawFloor();
 
 		// 오브젝트 그리기
-		print(player.pos, CYAN"P"WHITE);
-		print(enemy.pos, RED"D"WHITE);
+		print(player.pos, CYAN"†"WHITE);
+
+		if (stageIdx == 3) {
+			print(enemy.pos, RED"⊙"WHITE);
+
+			// 기자위에게 잡혔다면
+			if (!isStart) {
+				Point t = { size.x / 2 - 12, size.y / 2 - 2 };
+				print(t, "김준서에게 잡혀버렸다!");
+
+				if (!isGameoverSoundPlayed) {
+					sound.play("resource/sound/잡혔을때.wav", SND_FILENAME | SND_SYNC);
+					sound.play("resource/sound/게임오버.wav", SND_FILENAME | SND_ASYNC);
+					isGameoverSoundPlayed = TRUE;
+				}
+				if (inputKey(VK_ESCAPE)) exit(0);
+			}
+		}
 
 		// 스태미너 바
 		drawStamina();
-
-		// 기자위에게 잡혔다면
-		if (!isStart) {
-			Point t = { size.x / 2 - 12, size.y / 2 - 2 };
-			print(t, "김준서에게 잡혀버렸다!");
-
-			if (!isGameoverSoundPlayed) {
-				sound.play("resource/sound/잡혔을때.wav", SND_FILENAME | SND_SYNC);
-				sound.play("resource/sound/게임오버.wav", SND_FILENAME | SND_ASYNC);
-				isGameoverSoundPlayed = TRUE;
-			}
-			if (inputKey(VK_ESCAPE)) exit(0);
-		}
 	}
 
 	screenFlipping();
@@ -99,11 +114,16 @@ void update() {
 		// 키보드 입력 관리
 		gameInput();
 
-		// 적의 움직임 갱신
-		followEnemy();
+		if (stageIdx == 3) {
+			// 적의 움직임 갱신
+			followEnemy();
+		}
 
-		if ((int)player.pos.x == 0 && ((int)player.pos.y >= 31 && (int)player.pos.y <= 34)) {
-			--stageIdx;
+		if (stageIdx != 1) {
+			if ((int)player.pos.x == 0 && ((int)player.pos.y >= 26 && (int)player.pos.y <= 34)) {
+				--stageIdx;
+				setPoint(&player.pos, 50, 8);
+			}
 		}
 	}
 }

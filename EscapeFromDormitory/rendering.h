@@ -28,3 +28,10 @@ void renderMap(int stage) {
 		++m.y;
 	}
 }
+
+// ÇöÀç Ãş
+void drawFloor() {
+	Point p = { 100, 32 };
+	char buf[16] = ""; sprintf(buf, "%dÃş", stageIdx);
+	print(p, buf);
+}

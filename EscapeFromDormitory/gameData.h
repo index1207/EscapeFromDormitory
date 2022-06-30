@@ -2,6 +2,10 @@
 #include "console.h"
 
 
+HWND hWnd;
+HANDLE handle;
+
+
 Sound sound;
 BOOL isGameoverSoundPlayed = FALSE;
 BOOL isTalkToJunsungPlayed = FALSE;
@@ -17,7 +21,7 @@ typedef struct {
 
 int stamina;
 
-static Character player = { 0, 0, 0.1 };
+static Character player = { 0, 0, 0.5 };
 static Character enemy = { 0, 0, 0.15 };
 
 Map size = { 105, 35 };

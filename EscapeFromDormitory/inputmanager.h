@@ -51,7 +51,7 @@ void gameInput() {
 		}
 	}
 	if (inputKey('D') && player.pos.x < size.x - 3) {
-		if (map[stageIdx][(int)player.pos.y][(int)(player.pos.x + player.speed)] != WALL) {
+		if (map[stageIdx][(int)player.pos.y][(int)(player.pos.x + player.speed)+1] != WALL) {
 			player.pos.x += player.speed;
 		}
 	}
