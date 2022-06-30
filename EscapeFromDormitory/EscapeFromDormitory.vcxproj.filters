@@ -70,7 +70,7 @@
     <Text Include="resource\title.txt">
       <Filter>리소스 파일</Filter>
     </Text>
-    <Text Include="first.txt">
+    <Text Include="resource\stage\first.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
   </ItemGroup>
@@ -97,6 +97,9 @@
       <Filter>리소스 파일\sound</Filter>
     </Media>
     <Media Include="resource\sound\힌트1.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\힌트2.wav">
       <Filter>리소스 파일\sound</Filter>
     </Media>
   </ItemGroup>

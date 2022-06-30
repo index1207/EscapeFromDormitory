@@ -14,8 +14,9 @@ void initialization() {
 	fontex.cbSize = sizeof(CONSOLE_FONT_INFOEX);
 	handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	GetCurrentConsoleFontEx(handle, 0, &fontex);
-	fontex.FontWeight = 800;
-	fontex.dwFontSize.X = 22;
+	fontex.FontFamily = TMPF_TRUETYPE;
+	wcscpy(fontex.FaceName, L"Arial");
+	fontex.FontWeight = 200;
 	fontex.dwFontSize.Y = 22;
 	SetCurrentConsoleFontEx(handle, NULL, &fontex);
 
@@ -26,7 +27,7 @@ void initialization() {
 
 	//스테미나와 좌표의 초기값
 	stamina = MAX_STAMINA;
-	setPoint(&player.pos, 50, 8);
+	setPoint(&player.pos, 50, 5);
 	setPoint(&enemy.pos, 75, 2);
 
 	// 기본적인 콘솔창 세팅
@@ -40,11 +41,18 @@ void initialization() {
 	fclose(fp);
 
 	// 맵 로드
-	for (int i = 2; i <= 5; ++i) {
+	fp = fopen("resource/stage/first.txt", "r");
+	for (int i = 0; fgets(map[1][i], 105, fp) != NULL; ++i);
+
+	for (int i = 2; i < 5; ++i) {
 		fp = fopen("resource/stage/roby.txt", "r");
 		for (int j = 0; fgets(map[i][j], 105, fp) != NULL; ++j);
 		fclose(fp);
 	}
+
+	fp = fopen("resource/stage/fifth.txt", "r");
+	for (int j = 0; fgets(map[5][j], 105, fp) != NULL; ++j);
+	fclose(fp);
 
 	// 스크린 버퍼 초기화
 	screenInit();
@@ -122,7 +130,7 @@ void update() {
 		if (stageIdx != 1) {
 			if ((int)player.pos.x == 0 && ((int)player.pos.y >= 26 && (int)player.pos.y <= 34)) {
 				--stageIdx;
-				setPoint(&player.pos, 50, 8);
+				setPoint(&player.pos, 5, 29);
 			}
 		}
 	}

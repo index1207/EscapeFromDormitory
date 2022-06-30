@@ -24,11 +24,11 @@ void titleInput() {
 void gameInput() {
 	if (inputKey(VK_LSHIFT)) {
 		if (stamina > 0) {
-			player.speed = 0.3;
+			player.speed = 0.4;
 			stamina -= 1;
 		}
 		else {
-			player.speed = 0.1;
+			player.speed = 0.2;
 		}
 	}
 	if ((!inputKey(VK_LSHIFT)) && (stamina < MAX_STAMINA)) {
