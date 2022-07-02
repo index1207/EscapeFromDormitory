@@ -12,7 +12,7 @@ void followEnemy() {
 		vec2 normalized = vec2_normalize(&diff, vec2_size(diff));
 
 		// 벽에 부딛혔는지
-		if (map[stageIdx][(int)(enemy.pos.y + normalized.y * enemy.speed / 2)][(int)(enemy.pos.x + normalized.x * enemy.speed)+1] != WALL) {
+		if (map[stageIdx][(int)(enemy.pos.y + normalized.y * enemy.speed / 2)][(int)(enemy.pos.x + normalized.x * enemy.speed)+1] == ' ') {
 			enemy.pos.x += normalized.x * enemy.speed;
 			enemy.pos.y += normalized.y * enemy.speed / 2;
 		}
@@ -29,7 +29,7 @@ void followEnemy() {
 			set_vec2(&rv, player.pos.x - rightRay.x, player.pos.y - rightRay.y);
 
 			BOOL isHorizontal = TRUE; // 수평방향의 벽인가?
-			if (map[stageIdx][(int)enemy.pos.y][(int)enemy.pos.x - 1] == WALL || map[stageIdx][(int)enemy.pos.y][(int)enemy.pos.x + 2] == WALL) {
+			if (map[stageIdx][(int)enemy.pos.y][(int)enemy.pos.x - 1] != ' ' || map[stageIdx][(int)enemy.pos.y][(int)enemy.pos.x + 2] != ' ') {
 				isHorizontal = FALSE;
 			}
 

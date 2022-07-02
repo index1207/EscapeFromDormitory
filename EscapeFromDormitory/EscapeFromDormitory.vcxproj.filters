@@ -73,6 +73,9 @@
     <Text Include="resource\stage\first.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
+    <Text Include="resource\stage\fifth.txt">
+      <Filter>리소스 파일\stage</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="resource\sound\6호_노가리.wav">
@@ -100,6 +103,12 @@
       <Filter>리소스 파일\sound</Filter>
     </Media>
     <Media Include="resource\sound\힌트2.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\힌트3.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
+    <Media Include="resource\sound\힌트의힌트.wav">
       <Filter>리소스 파일\sound</Filter>
     </Media>
   </ItemGroup>

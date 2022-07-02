@@ -19,20 +19,32 @@ typedef struct {
 	char* name;
 } Character;
 
+typedef struct {
+	Point pos;
+	int nStage;
+	const char* sound;
+} Npc;
+
 int stamina;
 
 static Character player = { 0, 0, 0.2 };
 static Character enemy = { 0, 0, 0.25 };
 
+static Npc daejin;
+static Npc taeoh;
+static Npc joonseo;
+static Npc joonseung;
+static Npc jooeun;
+
 Map size = { 105, 35 };
 
-static char map[6][35][105];
+static char map[14][35][105];
 static char leftside[4][7][105];
 
 static BOOL isStart;
 static BOOL isTitleScreen;
 
-static Point arrow = {46, 0};
+static Point arrow = {44, 0};
 static int selection = 0;
 
 
@@ -40,5 +52,3 @@ static int stageIdx = 5;
 
 
 #define MAX_STAMINA 200
-
-#define WALL '#'

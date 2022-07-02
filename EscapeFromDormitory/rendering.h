@@ -12,14 +12,6 @@ void drawStamina() {
 	}
 }
 
-void drawTitle() {
-	Point p = { 5,0 };
-	for (int i = 0; i < 35; ++i) {
-		print(p, map[0][i]);
-		++p.y;
-	}
-}
-
 // ±â¼÷»ç ¸Ê ±×¸®±â
 void renderMap(int stage) {
 	Point m = { 0, 0 };

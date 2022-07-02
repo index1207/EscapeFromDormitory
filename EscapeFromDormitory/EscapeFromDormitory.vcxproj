@@ -33,6 +33,7 @@
     <ClCompile Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="resource\stage\fifth.txt" />
     <Text Include="resource\stage\first.txt" />
     <Text Include="resource\stage\leftside.txt" />
     <Text Include="resource\stage\rightside.txt" />
@@ -49,6 +50,8 @@
     <Media Include="resource\sound\쫒아갈때.wav" />
     <Media Include="resource\sound\힌트1.wav" />
     <Media Include="resource\sound\힌트2.wav" />
+    <Media Include="resource\sound\힌트3.wav" />
+    <Media Include="resource\sound\힌트의힌트.wav" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
