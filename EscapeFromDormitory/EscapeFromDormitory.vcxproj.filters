@@ -111,5 +111,8 @@
     <Media Include="resource\sound\힌트의힌트.wav">
       <Filter>리소스 파일\sound</Filter>
     </Media>
+    <Media Include="resource\sound\힌트4.wav">
+      <Filter>리소스 파일\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

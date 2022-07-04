@@ -51,6 +51,7 @@
     <Media Include="resource\sound\힌트1.wav" />
     <Media Include="resource\sound\힌트2.wav" />
     <Media Include="resource\sound\힌트3.wav" />
+    <Media Include="resource\sound\힌트4.wav" />
     <Media Include="resource\sound\힌트의힌트.wav" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

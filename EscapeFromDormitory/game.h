@@ -296,10 +296,11 @@ void update() {
 			// 적의 움직임 갱신
 			followEnemy();
 		}
-		else if (stageIdx == 1) {
+		else if (stageIdx == 1) { // 키패드
 			Point keypad = { 17,1 };
 			if (equalPoint(player.pos, keypad)) {
-				
+				char pwd[5] = "";
+				int i = 0;
 			}
 		}
 
