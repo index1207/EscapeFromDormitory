@@ -24,6 +24,15 @@ void renderMap(int stage) {
 // ⑷營 類
 void drawFloor() {
 	Point p = { 100, 32 };
-	char buf[16] = ""; sprintf(buf, "%d類", stageIdx);
+	char buf[16] = "";
+	if (stageIdx > 5) {
+		if (stageIdx > 9) {
+			sprintf(buf, "%d類", stageIdx - 8);
+		}
+		else {
+			sprintf(buf, "%d類", stageIdx - 4);
+		}
+	}
+	else sprintf(buf, "%d類", stageIdx);
 	print(p, buf);
 }

@@ -8,7 +8,7 @@ typedef struct sound_ {
 } Sound;
 
 void sound_play(LPCSTR filename, int type) {
-	PlaySound(TEXT(filename), NULL, type);
+	PlaySound(TEXT(filename), 0, type);
 }
 
 void sound_stop(void) {

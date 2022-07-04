@@ -46,8 +46,8 @@
     <Media Include="resource\sound\대화1.wav" />
     <Media Include="resource\sound\대화2.wav" />
     <Media Include="resource\sound\잡혔을때.wav" />
-    <Media Include="resource\sound\쫒아가면서.wav" />
-    <Media Include="resource\sound\쫒아갈때.wav" />
+    <Media Include="resource\sound\쫓아가면서.wav" />
+    <Media Include="resource\sound\쫓아갈때.wav" />
     <Media Include="resource\sound\힌트1.wav" />
     <Media Include="resource\sound\힌트2.wav" />
     <Media Include="resource\sound\힌트3.wav" />

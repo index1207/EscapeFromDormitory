@@ -5,6 +5,7 @@
 HWND hWnd;
 HANDLE handle;
 
+BOOL isPlayed = FALSE;
 
 Sound sound;
 BOOL isGameoverSoundPlayed = FALSE;
@@ -27,7 +28,7 @@ typedef struct {
 
 int stamina;
 
-static Character player = { 0, 0, 0.2 };
+static Character player = { 0, 0, 1 };
 static Character enemy = { 0, 0, 0.25 };
 
 static Npc daejin;
