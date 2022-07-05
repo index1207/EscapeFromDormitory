@@ -7,16 +7,21 @@ C:\dev\prj\GSMPRJ\EscapeFromDormitory\rendering.h(33,4): warning C4996: 'sprintf
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\rendering.h(36,7): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(16,21): warning C4244: '함수': 'double'에서 'short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(16,29): warning C4244: '함수': 'double'에서 'short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(28,2): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(28,33): warning C4133: '함수': 'char [6]'과(와) 'const wchar_t *' 사이의 형식이 호환되지 않습니다.
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(31,38): warning C4047: '함수': 'BOOL'의 간접 참조 수준이 'void *'과(와) 다릅니다.
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(31,34): warning C4024: 'SetCurrentConsoleFontEx': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(28,2): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(176,13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(181,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(185,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(190,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(186,13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(191,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(195,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(200,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(325,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  vector.h
-  EscapeFromDormitory.vcxproj -> C:\dev\prj\GSMPRJ\x64\Debug\EscapeFromDormitory.exe
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(200,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(205,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(210,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(222,13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\dev\prj\GSMPRJ\EscapeFromDormitory\game.h(342,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  코드를 생성하고 있습니다.
+  2 of 40 functions ( 5.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  EscapeFromDormitory.vcxproj -> C:\dev\prj\GSMPRJ\x64\Release\EscapeFromDormitory.exe

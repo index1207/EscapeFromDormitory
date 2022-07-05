@@ -28,7 +28,7 @@ typedef struct {
 
 int stamina;
 
-static Character player = { 0, 0, 1 };
+static Character player = { 0, 0, 0.2 };
 static Character enemy = { 0, 0, 0.25 };
 
 static Npc daejin;
@@ -51,5 +51,7 @@ static int selection = 0;
 
 static int stageIdx = 5;
 
+BOOL isStop = FALSE;
+BOOL isExit = FALSE;
 
 #define MAX_STAMINA 200

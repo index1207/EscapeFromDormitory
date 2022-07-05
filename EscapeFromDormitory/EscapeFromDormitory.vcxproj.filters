@@ -76,6 +76,9 @@
     <Text Include="resource\stage\fifth.txt">
       <Filter>리소스 파일\stage</Filter>
     </Text>
+    <Text Include="exit.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Media Include="resource\sound\6호_노가리.wav">

@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\prj\GSMPRJ\x64\Debug\EscapeFromDormitory.exe</FullPath>
+      <FullPath>C:\dev\prj\GSMPRJ\x64\Release\EscapeFromDormitory.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

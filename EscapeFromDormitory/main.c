@@ -1,11 +1,11 @@
 #include "game.h"
 
-int main() {
+int main(int argc, char* argv[]) {
 	initialization();
 
 	while (TRUE) {
 		Sleep(13);
-		update();
+		update(argc, argv);
 		render();
 	}
 	release();

@@ -62,6 +62,16 @@ void changeMap() {
 					setPoint(&player.pos, 71, 32);
 				}
 			}
+			else if ((int)player.pos.x == 10 && player.pos.y >= 18 && player.pos.y <= 24 && stageIdx != 1) {
+				if (stageIdx < 5 && stageIdx > 1) {
+					++stageIdx;
+					setPoint(&player.pos, 50, 10);
+				}
+			}
+			else if (stageIdx == 1 && (int)player.pos.x > 11 && (int)player.pos.x < 23 && (int)player.pos.y == 29) {
+				++stageIdx;
+				setPoint(&player.pos, 50, 10);
+			}
 			// 왼쪽 복도
 			else if ((int)player.pos.x == 0 && (int)player.pos.y >= 1 && (int)player.pos.y <= 5) {
 				stageIdx += 4;
@@ -75,8 +85,7 @@ void changeMap() {
 		}
 	}
 }
-
-void setNPC() {
+void initNpc() {
 	Point pos = { 77, 3 };
 	taeoh.nStage = 4;
 	taeoh.sound = "resource/sound/힌트의힌트.wav";
@@ -208,11 +217,15 @@ void loadMap(void) {
 void initialization() {
 	windowInit(); 
 	loadMap();
-	setNPC();
+	initNpc();
+
+	FILE* fp = fopen("exit.txt", "w+");
+	fprintf(fp, "F");
+	fclose(fp);
 
 	isTitleScreen = TRUE;
 
-	// 사운드
+	// 사운드W
 	InitSound(&sound);
 
 	//스테미나와 좌표의 초기값
@@ -282,9 +295,12 @@ void render() {
 }
 
 // 값 변화시키기
-void update() {
+void update(int argc, char* argv[]) {
 	if (isTitleScreen) {
 		titleInput();
+	}
+	else if (isExit) {
+		exit(1);
 	}
 	else if (isTitleScreen ^ isStart) {
 		// 키보드 입력 관리
@@ -299,8 +315,37 @@ void update() {
 		else if (stageIdx == 1) { // 키패드
 			Point keypad = { 17,1 };
 			if (equalPoint(player.pos, keypad)) {
-				char pwd[5] = "";
-				int i = 0;
+				if (!isStop) {
+					STARTUPINFO si;
+					PROCESS_INFORMATION pi;
+
+					ZeroMemory(&si, sizeof(si));
+					si.cb = sizeof(si);
+					ZeroMemory(&pi, sizeof(pi));
+
+					CreateProcess(
+						NULL,
+						argv[1],
+						NULL,
+						NULL,
+						FALSE,
+						0,
+						NULL,
+						NULL,
+						&si,
+						&pi
+					);
+					CloseHandle(pi.hProcess);
+					CloseHandle(pi.hThread);
+					isStop = TRUE;
+				}
+				FILE* fp = fopen("exit.txt", "r");
+				char buf[2];
+				fgets(buf, 2, fp);
+				fclose(fp);
+				if (strcmp(buf, "T") == 0) {
+					isExit = TRUE;
+				}
 			}
 		}
 
